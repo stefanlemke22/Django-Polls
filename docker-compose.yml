@@ -17,7 +17,7 @@ services:
     depends_on:
       - postgres
     volumes:
-      - ./django:/srv/djb
+      - ./django:/srv/djb_django
     env_file: ./.env
     command: /usr/local/bin/gunicorn main.wsgi:application -w 2 -b :8000
 
